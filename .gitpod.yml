@@ -7,3 +7,4 @@ ports:
 
 tasks:
   - command: now dev
+  - command: cd Authentication
