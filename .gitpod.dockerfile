@@ -5,4 +5,6 @@ RUN sudo apt-get update \
  && alias python='/usr/bin/python3' \
  && npm install -g now \
  && python3 -m pip install --user virtualenv \
- && pip3 install pytest flaskr
+ && pip3 install pytest flask.testing
+
+

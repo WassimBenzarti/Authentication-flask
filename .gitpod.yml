@@ -1,2 +1,9 @@
 image:
   file: .gitpod.dockerfile
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+tasks:
+  - command: now dev
