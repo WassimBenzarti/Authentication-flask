@@ -1,1 +1,4 @@
 /.now
+/.venv
+__pycache__
+.env

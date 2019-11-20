@@ -3,4 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return {"Hello":"world"}
+    return {
+        "login":{"path":"/login", "method":"post"},
+        "issue":{"path":"/request", "method":"post"}
+    }

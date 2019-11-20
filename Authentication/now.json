@@ -1,4 +1,10 @@
 {
+    "public":false,
+    "env":{
+        "DB_URI":"@deliverlydburi",
+        "DB_USER":"@deliverlydbuser",
+        "DB_PASS":"@deliverlydbpass"
+    },
     "routes":[
         { "src": "/", "dest": "api/index.py" },
         { "src": "/(.*)", "dest": "api/$1.py" }

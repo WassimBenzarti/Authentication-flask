@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+
+[packages]
+click = "==7.0"
+itsdangerous = "==1.1.0"
+Flask = "==1.1.1"
+Werkzeug = "==0.16.0"
+neo4j = "*"
+
+[requires]
+python_version = "3.7"
