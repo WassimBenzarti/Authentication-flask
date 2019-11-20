@@ -4,4 +4,4 @@ app = Flask(__name__)
 @app.route("/<path>", methods=["GET","POST"])
 def loginRoute(path):
     
-    return request.data
+    return "hello"

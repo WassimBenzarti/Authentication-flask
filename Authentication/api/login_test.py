@@ -1,19 +1,21 @@
-import os
-import tempfile
+from urllib.request import urlopen
+from flask import Flask
+from flask_testing import LiveServerTestCase
 
-import unittest
+class MyTest(LiveServerTestCase):
 
-from flask.testing import FlaskClient
+    def create_app(self):
+        app = Flask(__name__)
+        app.config['TESTING'] = True
+        # Default port is 5000
+        app.config['LIVESERVER_PORT'] = 8943
+        # Default timeout is 5 seconds
+        app.config['LIVESERVER_TIMEOUT'] = 10
+        return app
 
-from login import app
+    def test_server_is_up_and_running(self):
+        response = urlopen(self.get_server_url())
+        self.assertEqual(response.code, 200)
 
-client = FlaskClient(app)
-
-
-res = client.post("/login",data= {
-    "email":"email@mail.com",
-    "password":"123"
-})
-print(res)
 
 
